@@ -1,0 +1,98 @@
+{
+    "name": "magento-vscode-extension",
+    "displayName": "Magento Boilerplate",
+    "description": "A VS Code extension to generate Magento module boilerplate.",
+    "version": "1.2.0",
+    "publisher": "Ashish Kumar",
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "categories": ["Other"],
+    "activationEvents": [
+        "onCommand:magentoBoilerplate.createModule",
+        "onCommand:magentoBoilerplate.createTable",
+        "onCommand:magentoBoilerplate.createObserver",
+        "onCommand:magentoBoilerplate.createCliCommand",
+        "onCommand:magentoBoilerplate.createController",
+        "onCommand:magentoBoilerplate.createModel",
+        "onCommand:magentoBoilerplate.createRepository",
+        "onCommand:magentoBoilerplate.createCronJob",
+        "onCommand:magentoBoilerplate.createHelper",
+        "onCommand:magentoBoilerplate.createGraphQL",
+        "onCommand:magentoBoilerplate.createApi",
+        "onCommand:magentoBoilerplate.copilot",
+        "onCommand:magentoBoilerplate.commandPalette",
+        "onCommand:magentoBoilerplate.debugMagentoAI",
+        "onCommand:magentoBoilerplate.createAdminMenu",
+        "onCommand:magentoBoilerplate.createDeliveryMethod",
+        "onCommand:magentoBoilerplate.createPaymentGateway",
+        "onCommand:magentoBoilerplate.aiCodeGenerator",
+        "onCommand:magentoBoilerplate.generateUnitTest",
+        "onCommand:magentoBoilerplate.explainCode"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            { "command": "magentoBoilerplate.createModule", "title": "Magento Boilerplate: Create Module" },
+            { "command": "magentoBoilerplate.createTable", "title": "Magento Boilerplate: Create Table Structure" },
+            { "command": "magentoBoilerplate.createObserver", "title": "Magento Boilerplate: Create Observer" },
+            { "command": "magentoBoilerplate.createCliCommand", "title": "Magento Boilerplate: Create CLI Command" },
+            { "command": "magentoBoilerplate.createController", "title": "Magento Boilerplate: Create Controller (Admin/Frontend)" },
+            { "command": "magentoBoilerplate.createModel", "title": "Magento Boilerplate: Create Model" },
+            { "command": "magentoBoilerplate.createRepository", "title": "Magento Boilerplate: Create Repository" },
+            { "command": "magentoBoilerplate.createCronJob", "title": "Magento Boilerplate: Create Cron Job" },
+            { "command": "magentoBoilerplate.createHelper", "title": "Magento Boilerplate: Create Helper Class" },
+            { "command": "magentoBoilerplate.createGraphQL", "title": "Magento Boilerplate: Create GraphQL Query & Resolver" },
+            { "command": "magentoBoilerplate.createApi", "title": "Magento Boilerplate: Create REST API Endpoint" },
+            { "command": "magentoBoilerplate.copilot", "title": "Magento Boilerplate: Magento Copilot Assistant" },
+            { "command": "magentoBoilerplate.commandPalette", "title": "Magento: Open Command Palette" },
+            { "command": "magentoBoilerplate.debugMagentoAI", "title": "Magento: AI Debugging Assistant" },
+            { "command": "magentoBoilerplate.createAdminMenu", "title": "Magento Boilerplate: Create Admin Menu" },
+            { "command": "magentoBoilerplate.createDeliveryMethod", "title": "Magento Boilerplate: Create Delivery Method" },
+            { "command": "magentoBoilerplate.createPaymentGateway", "title": "Magento Boilerplate: Create Payment Gateway" },
+            { "command": "magentoBoilerplate.aiCodeGenerator", "title": "Magento Boilerplate: AI Code Generator" },
+            {
+                "command": "magentoBoilerplate.explainCode",
+                "title": "Magento Boilerplate: Explain Selected Code"
+            },
+            {
+                "command": "magentoBoilerplate.generateUnitTest",
+                "title": "Magento: Generate AI Unit Test",
+                "category": "Magento Boilerplate"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "magentoBoilerplate.commandPalette",
+                "key": "ctrl+shift+m",
+                "mac": "cmd+shift+m",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "magentoBoilerplate.debugMagentoAI",
+                "key": "ctrl+alt+d",
+                "mac": "cmd+alt+d",
+                "when": "editorTextFocus"
+            }
+        ]
+    },
+    "dependencies": {
+        "fs-extra": "^10.0.0",
+        "vscode": "^1.75.0",
+        "path": "^0.12.7"
+    },
+    "scripts": {
+        "package": "vsce package",
+        "publish": "vsce publish"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ashishkumar/magento-vscode-extension"
+    },
+    "bugs": {
+        "url": "https://github.com/ashishkumar/magento-vscode-extension/issues"
+    },
+    "homepage": "https://github.com/ashishkumar/magento-vscode-extension",
+    "license": "MIT",
+    "icon": "images/logo.png"
+}
